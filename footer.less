@@ -1,0 +1,78 @@
+@import './variables.less';
+.footer {
+    padding: @padding-large;
+    color: @slate-500;
+    margin-top: 2.5rem;
+    border-top: 1px solid @slate-400;
+
+    .footer-links {
+        display: flex;
+        justify-content: flex-start;
+        gap: 4rem;
+        margin-bottom: 2.5rem;
+
+        p {
+            font-size: @text-xl;
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: @slate-800;
+            }
+        }
+
+        @media (max-width: @lg-screen) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 4rem;
+        margin-bottom: 2.5rem;
+
+        p {
+            font-size: @text-xl;
+            cursor: pointer;
+            transition: color 0.3s;
+
+            &:hover {
+                color: @slate-800;
+            }
+        }
+
+        @media (max-width: @lg-screen) {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+    }
+
+    .footer-copyright {
+        display: flex;
+        gap: 2.5rem;
+
+        p {
+            font-size: @text-lg;
+        }
+
+        @media (max-width: @lg-screen) {
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    .footer-info {
+        margin-top: 1.5rem;
+        font-size: @text-sm;
+        color: @slate-500;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+    }
+}

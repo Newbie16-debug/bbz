@@ -1,0 +1,35 @@
+@import './variables.less';
+
+.features-container {
+    margin-top: 2rem;
+
+    .features-grid {
+        display: grid;
+        gap: 2rem;
+        padding: 2rem;
+        grid-template-columns: repeat(4, 1fr);
+
+        @media (max-width: @lg-screen) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: @md-screen) {
+            grid-template-columns: 1fr;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                max-width: @nav-item-icon-max-width; 
+            }
+
+            p {
+                font-size: @text-xl;
+                color: @slate-800;
+            }
+        }
+    }
+}

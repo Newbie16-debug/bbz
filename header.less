@@ -1,0 +1,112 @@
+@import './variables.less';
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid @slate-400; /* Slate 400 */
+    padding: 1rem 2rem;
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .logo {
+            border-radius: 0.5rem;
+            height: auto;
+            max-width: 3rem; 
+        }
+
+        .store-name {
+            font-size: 1.25rem; 
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .store-tagline {
+            color: @slate-500; 
+            font-size: @text-sm; 
+        }
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: @slate-500;
+            cursor: pointer;
+
+            &:hover {
+                color: black;
+            }
+
+            img {
+                height: auto;
+                max-width: 1.5rem; 
+            }
+        }
+    }
+}
+
+/* Адаптивность для экранов меньше 768px */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+
+        .logo-container {
+            .store-name {
+                font-size: 1rem;
+            }
+            .store-tagline {
+                font-size: 0.75rem;
+            }
+        }
+
+        .nav-list {
+            gap: 1rem;
+
+            .nav-item {
+                b, span {
+                    display: none; /* Скрываем текст */
+                }
+            }
+        }
+
+        
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* Адаптивность для экранов меньше 480px */
+@media (max-width: 480px) {
+    .header {
+        flex-direction: row;
+        align-items: center;  
+        gap: 1rem;
+        padding: 1rem;
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        
+        .nav-item b, .nav-item span {
+            display: none;
+        }
+    }
+}
